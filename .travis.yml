@@ -5,8 +5,10 @@ install:
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release SampleWebAPI.sln
-  - ls 
-  - ls ./SampleWebAPITests
-  - ls ./SampleWebAPITests/bin
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SampleWebAPITests/bin/Release/SampleWebAPITests.dll
   - echo 'Build Completed'
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SampleWebAPITests/bin/Release/SampleWebAPITests.dll
+  - echo 'Testing Completed'
+deploy:
+  provider: azure_web_apps
+  on: main
+  verbose: true
