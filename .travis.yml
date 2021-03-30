@@ -6,7 +6,7 @@ install:
 script:
   - msbuild /p:Configuration=Release SampleWebAPI.sln
   - ls 
-  - ls ./SampleWebAPI/SampleWebAPITests
-  - ls ./SampleWebAPI/SampleWebAPITests/bin
+  - ls ./SampleWebAPITests
+  - ls ./SampleWebAPITests/bin
   #- mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SampleWebAPI/SampleWebAPITests/bin/Release/SampleWebAPITests.dll
   - echo 'Build Completed'
