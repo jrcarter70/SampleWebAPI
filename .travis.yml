@@ -6,4 +6,4 @@ install:
 script:
   - msbuild /p:Configuration=Release SampleWebAPI.sln
   - ls
-  - echo 'Build Complete'
+  - echo 'Build Completed'
